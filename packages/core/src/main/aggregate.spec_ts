@@ -1,0 +1,7 @@
+import { core } from './aggregate';
+
+describe('core', () => {
+  it('should work', () => {
+    expect(core()).toEqual('core');
+  });
+});
