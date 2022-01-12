@@ -1,4 +1,7 @@
-public abstract class Aggregate<T, TId> {
+import { AggregateId } from "./aggregateId";
+import { DomainException } from "./exceptions";
+
+export abstract class Aggregate<T extends AggregateState<T>, TId extends AggregateId> {
     /// <summary>
     /// Get the list of pending changes (new events) within the scope of the current operation.
     /// </summary>
@@ -63,10 +66,10 @@ public abstract class Aggregate<T, TId> {
     /// Use this method to ensure you are operating on an existing aggregate.
     /// </summary>
     /// <exception cref="DomainException"></exception>
-    protected  EnsureExists( getException : Error? = null) {
-        if (currentVersion == -1)
+    protected EnsureExists(getException : Error? = null) {
+        if (this.currentVersion == -1)
             throw getException
-               ?? new DomainException($"{GetType().Name} doesn't exist: {GetId()}");
+               ?? new DomainException(`${typeof this} doesn't exist: ${this.getId()}`);
     }
 
     /// <summary>

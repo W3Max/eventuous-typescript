@@ -25,3 +25,10 @@ export class CommandHandlerAlreadyRegistered<T> extends Error {
     Object.setPrototypeOf(this, InvalidIdException.prototype);
   }
 }
+
+export class InvalidStreamName extends Error {
+  constructor(streamName: string) {
+    super(`Stream name is ${streamName ? "empty" : "invalid"}`);
+    Object.setPrototypeOf(this, InvalidStreamName.prototype);
+  }
+}

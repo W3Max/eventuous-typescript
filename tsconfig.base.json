@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@w3max/eventuous-typescript2/core": ["packages/core/src/index.ts"],
-      "@w3max/eventuous-typescript/test": ["packages/test/src/index.ts"]
+      "@w3max/eventuous-typescript": ["packages/core/src/index.ts"],
+      "@w3max/eventuous-typescript-test": ["packages/test/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

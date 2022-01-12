@@ -1,0 +1,13 @@
+{
+  "name": "@w3max/eventuous-typescript-test",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@types/faker": "^5.5.9",
+    "@types/luxon": "^2.0.8"
+  },
+  "dependencies": {
+    "faker": "^5.5.3",
+    "luxon": "^2.3.0",
+    "@w3max/eventuous-typescript": "workspace:^1.0.0"
+  }
+}

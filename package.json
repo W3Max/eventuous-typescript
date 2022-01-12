@@ -1,5 +1,5 @@
 {
-  "name": "eventuous-typescript2",
+  "name": "eventuous-typescript",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -28,5 +28,8 @@
   },
   "dependencies": {
     "tslib": "^2.0.0"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
